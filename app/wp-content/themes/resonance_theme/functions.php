@@ -15,6 +15,12 @@ wp_enqueue_script('main-university-js', get_theme_file_uri('/js/scripts-bundled.
    
    
   wp_enqueue_style('university_main_styles', get_stylesheet_uri(), NULL, microtime());
+   
+  wp_enqueue_style( 'section_styles',  get_template_directory_uri() . '/section_style.css', NULL, microtime());
+
+   
+  wp_enqueue_style('icon_styles', get_stylesheet_uri() . '', NULL, microtime());
+   
 }
 
 add_action('wp_enqueue_scripts', 'university_files');
