@@ -1,0 +1,363 @@
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+
+    .icon {
+      background-image: url('images/sprites/sprite-92675246.svg');
+    }
+   .no-svg .icon {
+      background-image: url('images/sprites/sprite-92675246.png');
+   }
+
+  .icon--001-youtube {
+    width: 52px;
+    height: 52px;
+    background-position: 5.333333333333333% 99.99108138238573%;
+  }
+
+  .icon--002-yelp {
+    width: 52px;
+    height: 52px;
+    background-position: 74.66666666666667% 97.09253065774804%;
+  }
+
+  .icon--003-wordpress {
+    width: 52px;
+    height: 52px;
+    background-position: 2.6666666666666665% 97.09253065774804%;
+  }
+
+  .icon--004-wikipedia {
+    width: 52px;
+    height: 52px;
+    background-position: 5.333333333333333% 97.09253065774804%;
+  }
+
+  .icon--005-whatsapp {
+    width: 52px;
+    height: 52px;
+    background-position: 8% 97.09253065774804%;
+  }
+
+  .icon--006-vine {
+    width: 52px;
+    height: 52px;
+    background-position: 10.666666666666666% 97.09253065774804%;
+  }
+
+  .icon--007-vimeo {
+    width: 52px;
+    height: 52px;
+    background-position: 13.333333333333334% 97.09253065774804%;
+  }
+
+  .icon--008-twitter {
+    width: 52px;
+    height: 52px;
+    background-position: 16% 97.09253065774804%;
+  }
+
+  .icon--009-tumblr {
+    width: 52px;
+    height: 52px;
+    background-position: 18.666666666666668% 97.09253065774804%;
+  }
+
+  .icon--011-stumbleupon {
+    width: 52px;
+    height: 52px;
+    background-position: 21.333333333333332% 97.09253065774804%;
+  }
+
+  .icon--012-spotify {
+    width: 52px;
+    height: 52px;
+    background-position: 24% 97.09253065774804%;
+  }
+
+  .icon--014-snapchat {
+    width: 52px;
+    height: 52px;
+    background-position: 26.666666666666668% 97.09253065774804%;
+  }
+
+  .icon--015-skype {
+    width: 52px;
+    height: 52px;
+    background-position: 29.333333333333332% 97.09253065774804%;
+  }
+
+  .icon--016-shutterstock {
+    width: 52px;
+    height: 52px;
+    background-position: 32% 97.09253065774804%;
+  }
+
+  .icon--017-scribd {
+    width: 52px;
+    height: 52px;
+    background-position: 34.666666666666664% 97.09253065774804%;
+  }
+
+  .icon--018-reddit {
+    width: 52px;
+    height: 52px;
+    background-position: 37.333333333333336% 97.09253065774804%;
+  }
+
+  .icon--019-quora {
+    width: 52px;
+    height: 52px;
+    background-position: 40% 97.09253065774804%;
+  }
+
+  .icon--021-pinterest {
+    width: 52px;
+    height: 52px;
+    background-position: 42.666666666666664% 97.09253065774804%;
+  }
+
+  .icon--023-paypal {
+    width: 52px;
+    height: 52px;
+    background-position: 45.333333333333336% 97.09253065774804%;
+  }
+
+  .icon--024-path {
+    width: 52px;
+    height: 52px;
+    background-position: 48% 97.09253065774804%;
+  }
+
+  .icon--025-myspace {
+    width: 52px;
+    height: 52px;
+    background-position: 50.666666666666664% 97.09253065774804%;
+  }
+
+  .icon--026-medium {
+    width: 52px;
+    height: 52px;
+    background-position: 53.333333333333336% 97.09253065774804%;
+  }
+
+  .icon--027-linkedin {
+    width: 52px;
+    height: 52px;
+    background-position: 56% 97.09253065774804%;
+  }
+
+  .icon--029-instagram {
+    width: 52px;
+    height: 52px;
+    background-position: 58.666666666666664% 97.09253065774804%;
+  }
+
+  .icon--032-hi5 {
+    width: 52px;
+    height: 52px;
+    background-position: 61.333333333333336% 97.09253065774804%;
+  }
+
+  .icon--033-google-plus {
+    width: 52px;
+    height: 52px;
+    background-position: 64% 97.09253065774804%;
+  }
+
+  .icon--034-foursquare {
+    width: 52px;
+    height: 52px;
+    background-position: 66.66666666666667% 97.09253065774804%;
+  }
+
+  .icon--035-flickr {
+    width: 52px;
+    height: 52px;
+    background-position: 69.33333333333333% 97.09253065774804%;
+  }
+
+  .icon--036-facebook {
+    width: 52px;
+    height: 52px;
+    background-position: 72% 97.09253065774804%;
+  }
+
+  .icon--039-dropbox {
+    width: 52px;
+    height: 52px;
+    background-position: 0 97.09253065774804%;
+  }
+
+  .icon--041-deviantart {
+    width: 52px;
+    height: 52px;
+    background-position: 77.33333333333333% 97.09253065774804%;
+  }
+
+  .icon--045-box {
+    width: 52px;
+    height: 52px;
+    background-position: 80% 97.09253065774804%;
+  }
+
+  .icon--046-bing {
+    width: 52px;
+    height: 52px;
+    background-position: 82.66666666666667% 97.09253065774804%;
+  }
+
+  .icon--048-android {
+    width: 52px;
+    height: 52px;
+    background-position: 85.33333333333333% 97.09253065774804%;
+  }
+
+  .icon--049-amazon {
+    width: 52px;
+    height: 52px;
+    background-position: 88% 97.09253065774804%;
+  }
+
+  .icon--alarmclock {
+    width: 52px;
+    height: 52px;
+    background-position: 90.66666666666667% 97.09253065774804%;
+  }
+
+  .icon--badtenant {
+    width: 52px;
+    height: 52px;
+    background-position: 93.33333333333333% 97.09253065774804%;
+  }
+
+  .icon--burden {
+    width: 52px;
+    height: 52px;
+    background-position: 96% 97.09253065774804%;
+  }
+
+  .icon--business-down-bars-graphic {
+    width: 52px;
+    height: 52px;
+    background-position: 98.66666666666667% 97.09253065774804%;
+  }
+
+  .icon--closing {
+    width: 52px;
+    height: 52px;
+    background-position: 0 99.99108138238573%;
+  }
+
+  .icon--codeviolations {
+    width: 52px;
+    height: 52px;
+    background-position: 2.6666666666666665% 99.99108138238573%;
+  }
+
+  .icon--css--svg--sprite.css-de6d2588 {
+    width: 2002px;
+    height: 1741.84px;
+    background-position: 0 0;
+  }
+
+  .icon--doublepayments {
+    width: 52px;
+    height: 52px;
+    background-position: 8% 99.99108138238573%;
+  }
+
+  .icon--facebook {
+    width: 52px;
+    height: 52px;
+    background-position: 10.666666666666666% 99.99108138238573%;
+  }
+
+  .icon--forrent {
+    width: 52px;
+    height: 52px;
+    background-position: 13.333333333333334% 99.99108138238573%;
+  }
+
+  .icon--givemoney {
+    width: 52px;
+    height: 52px;
+    background-position: 16% 99.99108138238573%;
+  }
+
+  .icon--hammer {
+    width: 52px;
+    height: 52px;
+    background-position: 18.666666666666668% 99.99108138238573%;
+  }
+
+  .icon--housesale {
+    width: 52px;
+    height: 52px;
+    background-position: 21.333333333333332% 99.99108138238573%;
+  }
+
+  .icon--instagram {
+    width: 52px;
+    height: 52px;
+    background-position: 24% 99.99108138238573%;
+  }
+
+  .icon--listed {
+    width: 52px;
+    height: 52px;
+    background-position: 26.666666666666668% 99.99108138238573%;
+  }
+
+  .icon--moving {
+    width: 52px;
+    height: 52px;
+    background-position: 29.333333333333332% 99.99108138238573%;
+  }
+
+  .icon--phonecall {
+    width: 52px;
+    height: 52px;
+    background-position: 32% 99.99108138238573%;
+  }
+
+  .icon--piggybank {
+    width: 52px;
+    height: 52px;
+    background-position: 34.666666666666664% 99.99108138238573%;
+  }
+
+  .icon--tax {
+    width: 52px;
+    height: 52px;
+    background-position: 37.333333333333336% 99.99108138238573%;
+  }
+
+  .icon--team {
+    width: 52px;
+    height: 52px;
+    background-position: 40% 99.99108138238573%;
+  }
+
+  .icon--testimonial {
+    width: 52px;
+    height: 52px;
+    background-position: 42.666666666666664% 99.99108138238573%;
+  }
+
+  .icon--tools {
+    width: 52px;
+    height: 52px;
+    background-position: 45.333333333333336% 99.99108138238573%;
+  }
+
+  .icon--twitter {
+    width: 52px;
+    height: 52px;
+    background-position: 48% 99.99108138238573%;
+  }
+
+  .icon--unwanted {
+    width: 52px;
+    height: 52px;
+    background-position: 50.666666666666664% 99.99108138238573%;
+  }
