@@ -62,7 +62,7 @@
             <div class="row__medium-6">
              
              <div class="feature-item">
-              <span class="icon icon--goingdown feature-item__icon"></span>
+              <span class="icon icon--business-down-bars-graphic feature-item__icon"></span>
                 <h3 class="feature-item__title">Property Is Worth Less Than What You Owe</h3>
                 <p>Dummy text.</p>
              </div>
