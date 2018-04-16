@@ -4,7 +4,6 @@ Author: Inkant Awasthi
 Version: 1.0
 Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
 */
-
 @charset "UTF-8";
 /*
 0 - 600px:      Phone
@@ -342,6 +341,13 @@ body {
       .banner__text-box {
         margin: 10vh 0; } }
   .banner--lease {
+    background: linear-gradient(to right bottom, #4A5B77, #E98180), url(../img/house3.jpg);
+    min-height: 50vh;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .banner--interior {
     background: linear-gradient(to right bottom, #4A5B77, #E98180), url(../img/house3.jpg);
     min-height: 50vh;
     background-blend-mode: multiply;

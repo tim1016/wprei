@@ -1,7 +1,7 @@
 <footer class="footer section">
     <div class="footer__logo-box">
         <svg class="footer__logoimg">
-            <use xlink:href="img/sprite.svg#newresonance"></use>
+            <use xlink:href="<?php echo get_template_directory_uri();?>/img/sprite.svg#newresonance"></use>
         </svg>
         <h3 class="logo-text">Resonance Realty</h3>
     </div>

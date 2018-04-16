@@ -16,7 +16,7 @@
                     
                         <a href='index.html'>
                             <svg class="brand__img">
-                                <use xlink:href="img/sprite.svg#newresonance"></use>
+                                <use xlink:href="<?php echo get_template_directory_uri();?>/img/sprite.svg#newresonance"></use>
                             </svg>   
                         </a> 
                     
