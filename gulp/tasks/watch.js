@@ -10,7 +10,7 @@ gulp.task('watch', function() {
       baseDir: "app"}
    });
 
-  watch(settings.indexFile, function() {
+  watch(settings.themeLocation + '**/*.php', function() {
     browserSync.reload();
   });
 
