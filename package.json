@@ -1,4 +1,4 @@
-{  
+{
   "name": "fictional-university-lwc",
   "version": "1.0.0",
   "description": "",
@@ -18,28 +18,29 @@
   },
   "author": "Inkant Awasthi",
   "repository": {
-     "type": "git",
-     "url": "https://github.com/tim1016/wprei.git"
+    "type": "git",
+    "url": "https://github.com/tim1016/wprei.git"
   },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.0.0-beta.34",
     "@babel/preset-env": "7.0.0-beta.34",
-    "babel-loader": "8.0.0-beta.0",
-    "del": "^3.0.0",
-    "svg2png": "^3.0.1",
-    "webpack": "3.10.0",
     "autoprefixer": "^8.1.0",
+    "babel-loader": "8.0.0-beta.0",
     "browser-sync": "^2.23.6",
     "contact": "^0.2.5",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-svg-sprite": "^1.4.0",
     "gulp-svg2png": "^2.0.2",
     "gulp-watch": "^5.0.0",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
-    "postcss-cli": "^5.0.0"
+    "postcss-cli": "^5.0.0",
+    "svg2png": "^3.0.1",
+    "webpack": "3.10.0"
   },
   "dependencies": {
     "jquery": "3.2.1",
