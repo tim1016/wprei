@@ -14,20 +14,20 @@
                 <div class="row">
                     <div class="brand">          
                     
-                        <a href='index.html'>
+                        <a href='<?php echo site_url( )?>'>
                             <svg class="brand__img">
                                 <use xlink:href="<?php echo get_template_directory_uri();?>/img/sprite.svg#newresonance"></use>
                             </svg>   
                         </a> 
                     
-                        <a class="brand__text" href="index.html"><strong>Resonance</strong>Realty</a>
+                        <a class="brand__text" href="<?php echo site_url( )?>"><strong>Resonance</strong>Realty</a>
                     </div>
                     <nav>
                         <div class="nav-mobile">
                             <a id="nav-toggle" href="#!"><span></span></a>
                         </div>
                         <ul class="nav-list">
-                            <li><a href="#!">Sell</a>
+                            <li><a href="<?php echo site_url( '/sell' );?>">Sell</a>
                                 <ul class="nav-dropdown">
                                     <li><a href="#!">Fast Cash Offer</a></li>
                                     <li><a href="#!">Already Moved</a></li>
@@ -46,8 +46,8 @@
         
                             <li><a href="#!">About</a>
                                 <ul class="nav-dropdown">
-                                    <li><a href="#!">Company</a></li>
-                                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                                    <li><a href="<?php echo site_url( '/about-us' )?>">About Us</a></li>
+                                    <li><a href="<?php echo site_url( '/privacy-policy' )?>">Privacy Policy</a></li>
                                     <li><a href="#!">Opportunities</a></li>
                                 </ul>
                             </li>
