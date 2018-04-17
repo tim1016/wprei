@@ -1,9 +1,11 @@
 <footer class="footer section">
     <div class="footer__logo-box">
-        <svg class="footer__logoimg">
-            <use xlink:href="<?php echo get_template_directory_uri();?>/img/sprite.svg#newresonance"></use>
-        </svg>
-        <h3 class="logo-text">Resonance Realty</h3>
+        <a href='<?php echo site_url( )?>'>
+            <svg class="brand__img">
+                <use xlink:href="<?php echo get_template_directory_uri();?>/img/sprite.svg#newresonance"></use>
+            </svg>   
+        </a> 
+        <a class="brand__text" href="<?php echo site_url( )?>"><strong>Resonance</strong>Realty</a>
     </div>
 
     <div class="row">
