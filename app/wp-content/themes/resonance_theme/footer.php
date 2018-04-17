@@ -12,10 +12,10 @@
         <div class="col-1-of-2">
             <div class="footer__navigation">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                    <li class="footer__item"><a href="<?php echo site_url( '/about-us' )?>" class="footer__link">About</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                    <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                    <li class="footer__item"><a href="<?php echo site_url( '/privacy-policy' )?>" class="footer__link">Privacy policy</a></li>
                     <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
                 </ul>
             </div>
