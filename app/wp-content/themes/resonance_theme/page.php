@@ -48,7 +48,7 @@ while(have_posts()){
                                         <div class="side-nav">
                                             <ul>
                                                 <li><a href="<?php echo get_permalink( $theParent );?>"> <i class="fa fa-home" aria-hidden="true"></i> <?php echo get_the_title( $theParent );?> </a></li>
-                                                <?php wp_list_pages( array( 'title_li' => NULL, 'child_of' => $findChildrenOf) ); ?>
+                                                <?php wp_list_pages( array( 'title_li' => NULL, 'child_of' => $findChildrenOf, 'sort_column' => 'menu_order') ); ?>
                                             </ul>
                                         </div>
                                         <?php

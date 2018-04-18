@@ -923,6 +923,42 @@ Instead edit gulp/templates/sprite */
     padding: 0.5rem 1rem;
     color: #fff; }
 
+.metabox {
+  background-color: #8eaebd;
+  border-radius: .3rem;
+  padding: 0.42857em 0.85714em;
+  display: inline-block;
+  margin-bottom: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .metabox--position-up {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%); }
+  .metabox--with-home-link {
+    padding: 0; }
+  .metabox__main {
+    padding: 1rem 1.5rem 1rem 1.1rem; }
+  .metabox p {
+    margin: 0;
+    font-size: .9rem;
+    color: #30415d; }
+  .metabox a {
+    color: #30415d;
+    text-decoration: none;
+    font-weight: bold; }
+  .metabox a:hover {
+    text-decoration: underline; }
+  .metabox .metabox__blog-home-link {
+    background-color: #B64E4D;
+    color: #FFF;
+    display: inline-block;
+    padding: 0.42857em 0.85714em;
+    border-radius: .3rem;
+    font-weight: normal; }
+  .metabox .metabox__blog-home-link:hover {
+    text-decoration: none;
+    background-color: #cf6766; }
+
 .section {
   padding: 5rem 0; }
   .section--specialities {
@@ -994,6 +1030,15 @@ Instead edit gulp/templates/sprite */
           animation: slideMenu .5s ease-out;
           animation-fill-mode: both;
           z-index: inherit; }
+
+.post__item:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.post__item--title {
+  line-height: 1.4; }
+  .post__item--title a {
+    text-decoration: none;
+    color: currentColor; }
 
 .footer {
   font-size: 1.4rem;

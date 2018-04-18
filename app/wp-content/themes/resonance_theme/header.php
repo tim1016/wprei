@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes( );?>>
 <head>
-<!--    <meta charset="UTF-8">
+    <meta charset=<?php bloginfo( 'charset' ); ?>> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title> -->
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class(  );?>>
     <header class="header">
         <div class="header__navigation">
             <div class="fixed">
@@ -22,12 +22,13 @@
                     
                         <a class="brand__text" href="<?php echo site_url( )?>"><strong>Resonance</strong>Realty</a>
                     </div>
+                    <?php if (is_page( 'sell' ) or wp_get_post_parent_id( 0 )==46) echo 'class="current-menu-item"';?>
                     <nav>
                         <div class="nav-mobile">
                             <a id="nav-toggle" href="#!"><span></span></a>
                         </div>
                         <ul class="nav-list">
-                            <li><a href="#!">Sell</a>
+                            <li ><a href="#!">Sell</a>
                                 <ul class="nav-dropdown">
                                     <li><a href="#!">Fast Cash Offer</a></li>
                                     <li><a href="<?php echo site_url( '/sell/already-moved/' )?>">Already Moved</a></li>
@@ -51,7 +52,7 @@
                                     <li><a href="#!">Opportunities</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#!">Blog</a></li>
+                            <li><a href="<?php echo site_url( 'Blog' )?>">Blog</a></li>
                         </ul>
                     </nav>
                 </div>
