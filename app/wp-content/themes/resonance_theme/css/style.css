@@ -959,6 +959,24 @@ Instead edit gulp/templates/sprite */
     text-decoration: none;
     background-color: #cf6766; }
 
+.page-numbers {
+  text-align: center;
+  display: inline-block;
+  padding: 0.42857em 0.85714em;
+  margin: 2rem 1rem 2rem 0;
+  border: 1px solid #30415d;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #30415d; }
+
+.page-numbers.current,
+a.page-numbers:hover {
+  background: #30415d;
+  color: #fff; }
+
 .section {
   padding: 5rem 0; }
   .section--specialities {
@@ -1174,7 +1192,6 @@ Instead edit gulp/templates/sprite */
     width: calc(3 * ((100% - 3 * 1rem) / 4) + 2 * 1rem); }
 
 .header__navigation {
-  height: 7rem;
   background: #30415d;
   font-size: 1.6rem;
   z-index: 20; }
@@ -1209,7 +1226,7 @@ nav {
         text-decoration: none; }
         @media only screen and (max-width: 56.25em) {
           nav ul li a {
-            background: rgba(48, 65, 93, 0.8); } }
+            background: #30415d; } }
         nav ul li a:hover, nav ul li a:active {
           background: #cf6766;
           color: #ffffff;
