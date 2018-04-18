@@ -27,12 +27,12 @@
                             <a id="nav-toggle" href="#!"><span></span></a>
                         </div>
                         <ul class="nav-list">
-                            <li><a href="<?php echo site_url( '/sell' );?>">Sell</a>
+                            <li><a href="#!">Sell</a>
                                 <ul class="nav-dropdown">
                                     <li><a href="#!">Fast Cash Offer</a></li>
-                                    <li><a href="#!">Already Moved</a></li>
-                                    <li><a href="#!">Stop Foreclosure</a></li>
-                                    <li><a href="#!">No Equity</a></li>
+                                    <li><a href="<?php echo site_url( '/sell/already-moved/' )?>">Already Moved</a></li>
+                                    <li><a href="<?php echo site_url( '/sell/stop-foreclosure/' )?>">Stop Foreclosure</a></li>
+                                    <li><a href="<?php echo site_url( '/sell/no-equity/' )?>">No Equity</a></li>
                                     <li><a href="#!">Previously Listed</a></li>
                                     <li><a href="#!">Code Violations</a></li>
                                     <li><a href="#!">Inheritance</a></li>

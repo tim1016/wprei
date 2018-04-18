@@ -158,6 +158,15 @@ body {
   background-color: rgba(48, 65, 93, 0.5);
   border-radius: 2.5rem; }
 
+.primary {
+  color: #30415d; }
+
+.secondary {
+  color: #cf6766; }
+
+.tertiary {
+  color: #8eaebd; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -427,17 +436,17 @@ body {
     font-weight: 500; }
 
 .heading-3 {
-  color: #fff;
   font-size: 3.0rem;
   font-weight: 300; }
   .heading-3--secondary {
     color: #cf6766; }
 
 .heading-4 {
-  color: #fff;
   font-size: 2.0rem;
   font-weight: 400;
   line-height: 1.2; }
+  .heading-4--secondary {
+    color: #cf6766; }
 
 .form-separator-heading {
   display: block; }

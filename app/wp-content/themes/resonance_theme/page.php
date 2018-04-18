@@ -26,18 +26,37 @@ while(have_posts()){
                 <div class="col-2-of-3">
                     <?php the_content();?>
                 </div>
-                
-                <div class="col-1-of-3">
-                    <div class="sidebar__left">
-                        <div class="side-nav">
-                            <ul>
-                                <li><a href="aboutus.html">About Us</a></li>
-                                <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                                <li><a href="opportunities.html">Opportunities</a></li>
-                            </ul>
+
+                <?php 
+                    $currentPageID = get_the_id();
+                    $theChildren = get_pages( array('child_of' => $currentPageID) );
+                    $theParent = wp_get_post_parent_id( $currentPageID );
+
+                    if($theParent or $theChildren){ ?>
+                        <div class="col-1-of-3">
+                            <div class="sidebar__left">
+                                <?php 
+                                    
+                                    if($theParent){
+                                        $findChildrenOf = $theParent;
+                                    }
+                                    else{
+                                        $findChildrenOf = $currentPageID;
+                                    }
+                                    if($theParent){
+                                        ?>
+                                        <div class="side-nav">
+                                            <ul>
+                                                <li><a href="<?php echo get_permalink( $theParent );?>"> <i class="fa fa-home" aria-hidden="true"></i> <?php echo get_the_title( $theParent );?> </a></li>
+                                                <?php wp_list_pages( array( 'title_li' => NULL, 'child_of' => $findChildrenOf) ); ?>
+                                            </ul>
+                                        </div>
+                                        <?php
+                                    }
+                                ?>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                <?php }?>
 
             </div>
 
