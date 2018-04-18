@@ -3,15 +3,15 @@ var gulp = require('gulp'),
 
 
 gulp.task('printPaths', function(){
-    console.log(Project.rootFolder)  ;
-    console.log(Project.projectDir);
-    console.log(Project.wpContent) ;
-    console.log(Project.themeLocation) ;
-    console.log(Project.urlToPreview) ;
-    console.log(Project.cssLocation);
-    console.log(Project.styleModules  );
-    console.log(Project.baseStyles   );
-    console.log(Project.images  );
-    console.log(Project.icons );
-    console.log(Project.finalStyleSheet);
+    console.log('Project.rootFolder  ' + Project.rootFolder)  ;
+    console.log('Project.projectDir  '+ Project.projectDir);
+    console.log('Project.wpContent  '  + Project.wpContent) ;
+    console.log('Project.themeLocation  '+ Project.themeLocation) ;
+    console.log('Project.urlToPreview  '+ Project.urlToPreview) ;
+    console.log('Project.cssLocation  '+Project.cssLocation);
+    console.log('Project.styleModules  '+ Project.styleModules);
+    console.log('Project.baseStyles' + Project.baseStyles);
+    console.log('Project.images  '+ Project.images);
+    console.log('Project.icons  '+ Project.icons);
+    console.log('Project.finalStyleSheet  '+ Project.finalStyleSheet);
 });

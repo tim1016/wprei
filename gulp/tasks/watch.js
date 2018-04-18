@@ -3,36 +3,14 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     settings = require('../settings');   
     
-gulp.task('watch', function() {
-   
-   browserSync.init({
-      server: {
-      baseDir: "app"}
-   });
-
-  watch(settings.themeLocation + '**/*.php', function() {
-    browserSync.reload();
-  });
-
-//  watch(settings.styleAssets + '**/*.css', function() {
-//    gulp.start('cssInject');
-//  });
-  
-//  watch(settings.scriptAssets + '**/*.js', function() {
-//    gulp.start('scriptsRefresh');
-//  });
-  
-  
-
-}); 
-/*
-gulp.task('cssInject', ['styles'], function(){
-   return gulp.src(settings.finalStyles)
-   .pipe(browserSync.stream());
-});
-
-gulp.task('scriptsRefresh', ['scripts'],function(){
-  browserSync.reload();
-})
-
-*/
+    gulp.task('watch', function() {
+        browserSync.init({
+          notify: false,
+          proxy: settings.urlToPreview,
+          ghostMode: false
+        });
+      
+        gulp.watch(settings.themeLocation + '/*.php', function(){browserSync.reload();});
+        gulp.watch(settings.themeLocation + '/css/*.css', function(){browserSync.reload();});
+        
+    });
