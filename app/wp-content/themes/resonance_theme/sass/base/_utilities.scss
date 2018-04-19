@@ -37,7 +37,7 @@
     margin: auto 0;
     
 }
-
+.no-margin {margin: 0}
 
 
 .boxed{
@@ -46,14 +46,11 @@
     border-radius: 2.5rem;
 }
 
-.primary{
-    color: $color-primary;
-}
+.primary{color: $color-primary;}
+.secondar{color: $color-secondary;}
+.tertiary{color: $color-tertiary;}
 
-.secondary{
-    color: $color-secondary;
-}
 
-.tertiary{
-    color: $color-tertiary;
-}
+.bg-primary{background-color: $color-primary;}
+.bg-secondary{background-color: $color-secondary;}
+.bg-tertiary{background-color: $color-tertiary;}

@@ -8,6 +8,8 @@
 	border-bottom: 2px solid white;
 }
 
+
+
 nav {
 	float: right;
 	z-index: 20;  
@@ -56,6 +58,12 @@ nav {
 				}
 			}
 		}
+	}
+}
+
+li.current-menu-item{
+	a{
+		color: $color-secondary-light !important;
 	}
 }
 
