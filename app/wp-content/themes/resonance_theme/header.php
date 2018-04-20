@@ -41,7 +41,7 @@
                                     <li><a href="#!">Problem Rental</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#!">Buy</a></li>
+                            <li <?php if(get_post_type()=='event') echo 'class="current-menu-item"'?>><a href="<?php echo get_post_type_archive_link( 'event' )?>">Events</a></li>
                             <li><a href="leaseoption.html">Lease</a></li>
                             
         

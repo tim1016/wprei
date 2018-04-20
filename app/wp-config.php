@@ -94,6 +94,11 @@ define('WP_DEBUG_DISPLAY', true);
 
 // For good measure, you can also add the follow code, which will hide errors from being displayed on-screen
 @ini_set('display_errors', 1);
+@ini_set('error_prepend_string',"<div class='error'>")  ;
+@ini_set('error_append_string',"</div>")  ;
+@ini_set('display_errors', 1);
+@ini_set('display_startup_errors', 1);
+
 
 /* That's all, stop editing! Happy blogging. */
 
