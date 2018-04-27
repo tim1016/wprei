@@ -170,6 +170,9 @@ body {
 .tertiary {
   color: #8eaebd; }
 
+.white {
+  color: #fff; }
+
 .bg-primary {
   background-color: #30415d; }
 
@@ -608,7 +611,8 @@ body {
 .ordered-list {
   list-style: none;
   counter-reset: counter-name;
-  position: relative; }
+  position: relative;
+  font-size: 1.6rem; }
   .ordered-list__item {
     position: relative;
     margin-left: 5rem; }
@@ -630,6 +634,47 @@ body {
     border: 3px solid #cf6766;
     color: #fff;
     box-sizing: border-box; }
+
+.unordered-list {
+  list-style: none;
+  position: relative;
+  font-size: 1.6rem; }
+  .unordered-list__item {
+    position: relative;
+    margin-left: 5rem; }
+  .unordered-list__item::before {
+    content: "\2756 ";
+    padding: 0.42857em 1.14286em;
+    position: absolute;
+    left: -5rem;
+    top: 0;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 3.0em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #30415d;
+    box-sizing: border-box; }
+
+.link-list li {
+  padding: 1rem 0;
+  font-size: 1.6rem; }
+  .search-overlay .link-list li {
+    font-size: 1.3rem; }
+
+.link-list li:last-child {
+  border-bottom: none; }
+
+.link-list a {
+  color: #cf6766; }
+
+.min-list {
+  padding: 0;
+  margin: 0; }
+  .min-list li {
+    list-style: none; }
 
 /* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
 Instead edit gulp/templates/sprite */

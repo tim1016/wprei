@@ -17,7 +17,7 @@
                     <div class="col-1-of-3">
                     <div class="vcenter-table">
                         <div class="vcenter-table-cell">
-                            <div class="form-container boxed dark-shadow">
+                            <div class="form-container boxed white dark-shadow">
                                     <h1 class="heading-4 form-title boxed center u-margin-bottom-small">
                                         Get a free no-obligation consultation
                                     </h1>
