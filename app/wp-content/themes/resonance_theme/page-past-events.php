@@ -1,21 +1,15 @@
-<?php get_header();?>
+<?php 
+get_header();
+pageBanner(
+    array(
+        'title' => 'Past Events!',
+        'subtitle' => 'A recap of our past events',
+        'photo' => ''
+    )
+);
+?>
 
-<section class="banner">
-    <div class="banner--interior ">                    
-        <div class="row">
-            <div class="banner__box">
-                <h1 class="display-1 display-1--main moveinleft">Past Events</h1>
-                <h1 class="display-1 display-1--sub moveinright"> A recap of our past events
-                <!--
-                    <?php 
-                        the_archive_description();
-                    ?>
-                    -->
-                </h1>               
-            </div>
-        </div>
-    </div>
-</section>
+
 
 
 <section class="section section--blogs">    

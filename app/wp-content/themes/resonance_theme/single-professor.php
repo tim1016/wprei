@@ -4,18 +4,21 @@
 <?php 
 while(have_posts()){
     the_post(); 
+    pageBanner();
     ?>
+
+    <!--
     <section class="banner">
         <div class="banner--interior ">                    
             <div class="row">
                 <div class="banner__box">
-                    <h1 class="display-1 display-1--main moveinleft"><?php the_title();?></h1>
-                    <h1 class="display-1 display-1--sub moveinright"><?php the_field('page_banner_subtitle')?></h1>               
+                    <h1 class="display-1 display-1--main moveinleft"><?php //the_title();?></h1>
+                    <h1 class="display-1 display-1--sub moveinright"><?php //the_field('page_banner_subtitle')?></h1>               
                 </div>
             </div>
         </div>
     </section>
-
+-->
 
     <section class="section">
         <div class="row  generic-text">

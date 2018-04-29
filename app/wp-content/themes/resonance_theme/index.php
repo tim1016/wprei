@@ -1,15 +1,13 @@
-<?php get_header();?>
+<?php get_header();
+pageBanner(
+    array(
+        'title' => 'Welcome to our blog!',
+        'subtitle' => 'Keep up with the latest news',
+        'photo' => ''
+    )
+);
 
-<section class="banner">
-    <div class="banner--interior ">                    
-        <div class="row">
-            <div class="banner__box">
-                <h1 class="display-1 display-1--main moveinleft">Welcome to our blog!</h1>
-                <h1 class="display-1 display-1--sub moveinright">keep up with the latest news</h1>               
-            </div>
-        </div>
-    </div>
-</section>
+?>
 
 
 <section class="section section--blogs">    

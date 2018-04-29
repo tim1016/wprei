@@ -7,7 +7,18 @@ while(have_posts()){
     the_post(); ?>
 
     <main>
+    <?php 
+        pageBanner(
+            array(
+                'title' => '',
+                'subtitle' => '',
+                'photo' => ''
+            ));
+    ?>
+<!--
         <section class="banner">
+
+
             <div class="banner--interior ">                    
                 <div class="row">
                     <div class="banner__box">
@@ -16,6 +27,7 @@ while(have_posts()){
                     </div>
                 </div>
             </div>
+-->
         </section>
 
 

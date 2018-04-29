@@ -23,6 +23,36 @@
     add_action( 'wp_enqueue_scripts', 'rei_theme_stylesheets' );
 
 
+    function pageBanner($args = NULL){
+        if(!$args['title']){
+            $args['title'] = get_the_title(); 
+        }
+
+        if(!$args['subtitle']){
+            $args['subtitle'] = get_field('page_banner_subtitle'); 
+        }
+
+
+        if(!$args['photo']){
+            if(get_field('page_banner_image')){
+               $args['photo'] = get_field('page_banner_image') ['sizes']['pageBanner'];
+            }else{
+                $fallbackBanner = get_template_directory_uri() . '/img/banner-medium.jpg';
+                $args['photo'] = $fallbackBanner;
+            }
+        }
+        ?>
+        <div class="page-banner">
+            <div class="page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>);"></div>
+            <div class="page-banner__content row">
+                <h1 class="display-1 display-1--main moveinleft"><?php echo $args['title']; ?></h1>
+                <h1 class="display-1 display-1--sub moveinright"><?php echo $args['subtitle']; ?></h1>  
+            </div>  
+        </div>
+      <?php
+    }
+
+
 
     function university_features(){
         //register_nav_menu( 'headerMenuLocation', 'Header Menu Location' );
