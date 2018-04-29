@@ -41,7 +41,7 @@ function university_post_types(){
 
     // Program post type
     register_post_type( 'professor', array(
-        'supports' => array('title', 'editor'),
+        'supports' => array('title', 'editor', 'thumbnail'),
         'rewrite' => array(
             'slug' => 'professors'
         ),
