@@ -90,6 +90,22 @@ while(have_posts()){
                     $homepageEvents->the_post(); 
                     get_template_part('template_parts/content', 'event');
                 }
+
+                wp_reset_postdata();
+
+                $relatedCampuses = get_field('related_campus');
+
+                if($relatedCampuses){
+
+                    echo '<h2 class="headline-4 u-margin-top-big">' . get_the_title() . ' is available at: </h2>';
+                    echo '<ul class="link-list min-list">';
+                    foreach($relatedCampuses as $campus){
+                        ?>
+                        <li><a href="<?php echo get_the_permalink($campus);?>"> <?php echo get_the_title($campus);?></a></li>
+                        <?php
+                    }
+                    echo '</ul>';
+                }
             ?>
 
         </div>
