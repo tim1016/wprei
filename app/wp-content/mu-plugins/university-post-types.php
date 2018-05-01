@@ -48,13 +48,32 @@ function university_post_types(){
         'has_archive' => true,
         'public' => true,
         'labels' => array(
-            'name' => 'professors',
+            'name' => 'Professors',
             'add_new_item' => 'Add New Professor',
             'edit_item' => 'Edit Professor',
             'all_items' => 'All Professors',
             'singular_name' => 'Professor'
         ),
-        'menu_icon' => 'dashicons-id'
+        'menu_icon' => 'dashicons-businessman'
+    ));
+
+
+
+    register_post_type( 'campus', array(
+        'supports' => array('title', 'editor', 'excerpt'),
+        'rewrite' => array(
+            'slug' => 'campuses'
+        ),
+        'has_archive' => true,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Campuses',
+            'add_new_item' => 'Add New campus',
+            'edit_item' => 'Edit Campus',
+            'all_items' => 'All Campuses',
+            'singular_name' => 'Campus'
+        ),
+        'menu_icon' => 'dashicons-admin-multisite'
     ));
 
 }

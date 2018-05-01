@@ -1,14 +1,17 @@
 <?php
 
     function rei_theme_stylesheets() {
-        wp_register_script( 'rei-jquery', get_template_directory_uri() .'/js/jquery.min.js', NULL, 1.0, true);
+        wp_register_script( 'rei-scripts-bundled', get_template_directory_uri() .'/js/scripts-bundled.js', NULL, 1.0, true);
         wp_register_script( 'rei-app', get_template_directory_uri() .'/js/app1.js', NULL, 1.0, true);
         wp_register_script( 'rei-parallax', get_template_directory_uri() .'/js/parallax.js', NULL, 1.0, true);
         wp_register_script( 'rei-includeHTML', get_template_directory_uri() .'/js/includeHTML.js', NULL, 1.0, true);
-        wp_enqueue_script( 'rei-jquery' );
+        wp_register_script( 'googleMap',  '//maps.googleapis.com/maps/api/js?key=AIzaSyB_y9j1uxmOH2Y__fMGNwvJ7ZMnjAMz0oM', NULL, 1.0, true);
+        wp_enqueue_script( 'googleMap' );
+        wp_enqueue_script( 'rei-scripts-bundled' );
         wp_enqueue_script( 'rei-app' );
         wp_enqueue_script( 'rei-parallax' );
         wp_enqueue_script( 'rei-includeHTML' );
+        
 
         wp_register_style( 'rei-themesytle',  get_stylesheet_directory_uri() .'/css/style.css', array(), null, 'all' );
         wp_register_style( 'rei-themedetail', get_stylesheet_uri(), '', null, 'all' );
@@ -96,6 +99,15 @@
     }
 
     add_action('pre_get_posts', 'university_adjust_queries');
+
+    function university_map_key($api){
+        $api['key'] = 'AIzaSyB_y9j1uxmOH2Y__fMGNwvJ7ZMnjAMz0oM';
+        return $api;
+
+    }
+
+    add_filter('acf/fields/google_map/api', 'university_map_key');
+
 
 
 
