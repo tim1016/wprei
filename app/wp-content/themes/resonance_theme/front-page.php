@@ -170,7 +170,7 @@
                     <h2 class="heading-3 u-center-text u-margin-bottom-medium">From Our Blogs</h2>
                     <?php 
                         $homepagePosts = new WP_Query(array(
-                            'posts_per_page' => 2
+                            'posts_per_page' => -1
                         ));
 
                         while($homepagePosts->have_posts()){

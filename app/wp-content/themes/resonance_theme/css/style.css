@@ -182,6 +182,12 @@ body {
 .bg-tertiary {
   background-color: #8eaebd; }
 
+.floatright {
+  float: right; }
+
+.floatleft {
+  float: left; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -322,7 +328,7 @@ body {
 
 .page-banner {
   background-color: #30415d;
-  padding: 13rem 0 6rem 0;
+  padding: 10rem 0 6rem 0;
   position: relative; }
   @media only screen and (max-width: 56.25em) {
     .page-banner {
@@ -472,10 +478,10 @@ body {
   display: flex; }
 
 .heading-2 {
-  color: #333;
   font-size: 4rem;
-  font-weight: 300;
-  line-height: 1.2; }
+  font-weight: 900;
+  line-height: 1.2;
+  display: flex; }
   .heading-2--main {
     display: block;
     font-weight: 200; }
@@ -1018,14 +1024,14 @@ Instead edit gulp/templates/sprite */
     color: #fff; }
 
 .metabox {
-  background-color: #8eaebd;
+  background-color: #cedce3;
   border-radius: .3rem;
   padding: 0.42857em 0.85714em;
   display: inline-block;
   margin-bottom: 2rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
   .metabox--position-up {
-    position: absolute;
+    position: relative;
     top: 0;
     transform: translateY(-50%); }
   .metabox--with-home-link {
@@ -1116,14 +1122,20 @@ a.page-numbers:hover {
   .acf-map img {
     max-width: inherit !important; }
 
-.section {
-  padding: 5rem 0; }
-  .section--specialities {
-    background-color: #cedce3; }
-  .section--scenarios {
-    background-color: #f7f7f7; }
-  .section--book {
-    /*        padding: 15rem 0;
+.post img {
+  display: block;
+  height: auto;
+  float: right;
+  margin-left: 0 auto; }
+
+.section--specialities {
+  background-color: #cedce3; }
+
+.section--scenarios {
+  background-color: #f7f7f7; }
+
+.section--book {
+  /*        padding: 15rem 0;
         background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
     
         @include respond(tab-port) {

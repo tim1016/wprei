@@ -40,7 +40,7 @@
             if(get_field('page_banner_image')){
                $args['photo'] = get_field('page_banner_image') ['sizes']['pageBanner'];
             }else{
-                $fallbackBanner = get_template_directory_uri() . '/img/banner-medium.jpg';
+                $fallbackBanner = get_template_directory_uri() . '/img/posts_banner.jpg';
                 $args['photo'] = $fallbackBanner;
             }
         }
@@ -48,14 +48,20 @@
         <div class="page-banner">
             <div class="page-banner__bg-image" style="background-image: url(<?php echo $args['photo']; ?>);"></div>
             <div class="page-banner__content row">
-                <h1 class="display-1 display-1--main moveinleft"><?php echo $args['title']; ?></h1>
-                <h1 class="display-1 display-1--sub moveinright"><?php echo $args['subtitle']; ?></h1>  
+                <h1 class="heading-2 white moveinleft"><?php echo $args['title']; ?></h1>
             </div>  
         </div>
       <?php
     }
 
-
+    
+    function custom_image_sizes_choose( $sizes ) {
+        $custom_sizes = array(
+            'featured-image' => 'Featured Image',
+            'professorLandscape' => 'Professor Landscape',
+        );
+        return array_merge( $sizes, $custom_sizes );
+    }
 
     function university_features(){
         //register_nav_menu( 'headerMenuLocation', 'Header Menu Location' );
@@ -66,6 +72,7 @@
         add_image_size('pageBanner', 1500, 360, true);
     }
     add_action( 'after_setup_theme', 'university_features');
+    add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
 
     function university_adjust_queries($query){
         $today = date('Ymd');
@@ -102,9 +109,15 @@
 
         }
 
+        if( !is_admin() and is_post_type_archive('post') and is_main_query())
+        {
+            $query->set('posts_per_page', 10);
+
+        }
+
     }
 
-    add_action('pre_get_posts', 'university_adjust_queries');
+     add_action('pre_get_posts', 'university_adjust_queries');
 
     function university_map_key($api){
         $api['key'] = 'AIzaSyB_y9j1uxmOH2Y__fMGNwvJ7ZMnjAMz0oM';
