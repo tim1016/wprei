@@ -32,6 +32,10 @@ pageBanner(
             echo paginate_links(  );
         ?>
     </div>
+
+    <div class="blog-gallery">
+        
+    </div>
 </section>
 
 
