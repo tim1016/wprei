@@ -10,26 +10,47 @@ pageBanner(
 ?>
 
 
-<section class="section section--blogs">    
+<section class="section section--padding section--blogs">    
     <div class="row">
         <?php 
             while(have_posts()){
-                the_post(); ?>
-                <div class="post__item">
-                    <h2 class="heading-3 primary post__item--title"><a href="<?php the_permalink(  );?>"><?php the_title( );?></a></h2>
-                    <div class="metabox">
-                        <p>Posted by <?php echo the_author_posts_link( );?> on <?php the_time('n.j.y')?> in <?php echo get_the_category_list( ', ' )?></p>
+                the_post(); 
+                $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID(), $size='Small') );
+                //echo $url;
+                ?>
+                <div class="col-1-of-3">
+                    <div class="card u-margin-bottom-medium  generic-text generic-text--justified-content light-shadow ">
+                        <div class="card-side">
+                            <div class="card__picture" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);">
+                                <div class="post-title ">
+                                <span class="post-title__text rounded boxed"><?php echo get_the_title();?></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-category">
+                            <?php echo get_the_category_list( )?> 
+                        </div>
+                        <span class="author"></span>
+                        <span class="post-author">By <?php echo the_author_posts_link( );?> on <?php the_time('n.j.y')?></span>
+                        <div class="post-excerpt">
+                            <p><?php echo get_the_excerpt();?></p>
+                        </div>
+
+                        <div class="read-more">
+                            <a class="btn-read-more" href="<?php the_permalink()?>"> Read More &rarr;</a>
+                        </div>
                     </div>
-                    <div class="generic-text">
-                        <?php the_excerpt();?>
-                    </div>
-                    <p><a class="btn-text" href="<?php the_permalink(  );?>"> Continue Reading &raquo; </a></p>
-                </div>
-                
+
+
+
+                </div>  
+
+
                 <?php
 
             }
-            echo paginate_links(  );
+  //          echo paginate_links(  );
         ?>
     </div>
 
