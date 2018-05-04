@@ -140,11 +140,17 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
-.light-shadow {
+.light-shadow-short {
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15); }
+
+.light-shadow-long {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
 
-.dark-shadow {
-  box-shadow: 0 0.5rem 2rem #4a5b77; }
+.dark-shadow-short {
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5); }
+
+.dark-shadow-long {
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5); }
 
 .vcenter-table {
   display: flex;
@@ -1156,6 +1162,7 @@ a.page-numbers:hover {
   width: 100%;
   overflow: hidden;
   background-color: #eee;
+  transition: all 0.3s ease;
   /*
     //@include respond(tab-port) {
     @media only screen and (max-width: 56.25em),
@@ -1205,12 +1212,6 @@ a.page-numbers:hover {
         }
     }
 */ }
-  .card__side {
-    height: 60rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
   .card__picture {
     background-size: cover;
     background-position: center;
@@ -1254,23 +1255,29 @@ a.page-numbers:hover {
       text-decoration: none;
       color: #fff;
       font-weight: 400; }
-  .card .post-author {
-    display: block;
-    background-color: #30415d;
-    color: #fff;
-    font-size: 1.6rem;
-    padding: 0.35714em 0.71429em; }
-    .card .post-author a {
-      text-decoration: none;
-      color: white; }
-  .card .post-excerpt {
-    display: block;
-    font-size: 1.6rem;
-    padding: 0.35714em 0.71429em; }
-  .card .read-more {
-    position: absolute;
-    bottom: .5rem;
-    right: 0.5rem; }
+
+.post-author {
+  display: block;
+  background-color: #30415d;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0.35714em 0.71429em; }
+  .post-author a {
+    text-decoration: none;
+    color: white; }
+
+.post-excerpt {
+  display: block;
+  font-size: 1.6rem;
+  padding: 0.35714em 0.71429em; }
+
+.read-more {
+  position: absolute;
+  bottom: .5rem;
+  right: 0.5rem; }
+
+.card:hover {
+  transform: translateY(-0.2rem) scale(1.02); }
 
 .section--padding {
   padding: 5rem 0; }

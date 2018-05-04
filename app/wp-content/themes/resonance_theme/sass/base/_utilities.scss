@@ -20,12 +20,22 @@
 .u-margin-top-big { margin-top: 8rem !important; }
 .u-margin-top-huge { margin-top: 10rem !important; }
 
-.light-shadow{
+
+.light-shadow-short{
+    box-shadow: 0 .5rem 2rem rgba($color-black, .15);
+}
+
+
+.light-shadow-long{
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 }
 
-.dark-shadow{
-    box-shadow: 0 0.5rem 2rem rgba($color-primary-light, 1);
+.dark-shadow-short{
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.5);
+}
+
+.dark-shadow-long{
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
 }
 
 .vcenter-table{

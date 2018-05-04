@@ -54,6 +54,8 @@
       <?php
     }
 
+
+
     
     function custom_image_sizes_choose( $sizes ) {
         $custom_sizes = array(
@@ -68,6 +70,9 @@
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
         add_image_size('professorLandscape', 400, 260, true);
+        add_image_size('cropped300', 300, 300, true);
+        add_image_size('uncropped300', 300, 300, false);
+        add_image_size('featured_preview', 55, 55, true);
         add_image_size('professorPortrait', 480, 650, true);
         add_image_size('pageBanner', 1500, 360, true);
     }
@@ -135,6 +140,32 @@
 
 
     
+// Adding featured image to the posts table
+// GET FEATURED IMAGE
+function ST4_get_featured_image($post_ID) {
+    $post_thumbnail_id = get_post_thumbnail_id($post_ID);
+    if ($post_thumbnail_id) {
+        $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'featured_preview');
+        return $post_thumbnail_img[0];
+    }
+}
+// ADD NEW COLUMN
+function ST4_columns_head($defaults) {
+    $defaults['featured_image'] = 'Featured Image';
+    return $defaults;
+}
+ 
+// SHOW THE FEATURED IMAGE
+function ST4_columns_content($column_name, $post_ID) {
+    if ($column_name == 'featured_image') {
+        $post_featured_image = ST4_get_featured_image($post_ID);
+        if ($post_featured_image) {
+            echo '<img src="' . $post_featured_image . '" />';
+        }
+    }
+}
+add_filter('manage_posts_columns', 'ST4_columns_head');
+add_action('manage_posts_custom_column', 'ST4_columns_content', 10, 2);
 
 
 ?>
