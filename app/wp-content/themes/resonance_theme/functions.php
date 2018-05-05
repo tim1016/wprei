@@ -8,6 +8,8 @@
         wp_register_script( 'rei-parallax', get_template_directory_uri() .'/js/parallax.js', NULL, 1.0, true);
         wp_register_script( 'rei-includeHTML', get_template_directory_uri() .'/js/includeHTML.js', NULL, 1.0, true);
         wp_register_script( 'googleMap',  '//maps.googleapis.com/maps/api/js?key=AIzaSyB_y9j1uxmOH2Y__fMGNwvJ7ZMnjAMz0oM', NULL, 1.0, true);
+        wp_register_script( 'g-recaptcha',  '//www.google.com/recaptcha/api.js', NULL, 1.0, true);
+
 
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'validatejs' );

@@ -6,6 +6,7 @@
                 </h1>
 
             <form action="<?php the_permalink()?>" method="post" autocomplete="on" name="fastcashoffer">
+
                 <div class="form-row">
                     <div class="form-col-1-of-2">
                         <input type="text" class="form__input" autocomplete='given-name' placeholder="First Name" id="fname"   name="firstname" required>
@@ -105,6 +106,8 @@
                 <div class="form-row .u-center-text">
                     <input type="submit" class="btn btn--gradient" value="Submit" id="submitform"  name="submitform" >
                 </div>
+
+
             </form>
         </div>
     </div>                            

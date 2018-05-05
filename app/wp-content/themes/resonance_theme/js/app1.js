@@ -95,6 +95,43 @@ jQuery(document).ready(function($){
         });
 
     });
+
+
+
+
+
+    function validateCaptcha(){
+        if ($('input[name="valid"]')) return true;
+        if ($('input[name="recaptcha_response_field"]').val() == "")
+        {
+            alert("Fill in the captcha field");
+            return false
+        }
+        $.ajax({
+            url: "verify.php",
+            type: "POST",
+            async:"false",
+            data: {
+                recaptcha_response_field: $('input[name="recaptcha_response_field"]').val(),
+                recaptcha_challenge_field: $('input[name="recaptcha_challenge_field"]').val()
+            },
+            success: function(data){
+                if (data == "OK")
+                {
+                    $('input[name="valid"]').val(1);
+                    $('.form').submit();
+                }
+                else
+                {
+                    alert(data);
+                }
+            },
+            error: function(){
+                alert("An error occured, please try again later");
+            }
+        });
+        return false;
+    };
     
 });
 
