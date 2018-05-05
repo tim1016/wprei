@@ -1,11 +1,16 @@
 <?php
 
     function rei_theme_stylesheets() {
+        wp_register_script( 'jquery', get_template_directory_uri() .'/js/jquery.min.js', NULL, 1.0, true);
+        wp_register_script( 'validatejs', get_template_directory_uri() .'/js/jquery.validate.min.js', NULL, 1.0, true);
         wp_register_script( 'rei-scripts-bundled', get_template_directory_uri() .'/js/scripts-bundled.js', NULL, 1.0, true);
         wp_register_script( 'rei-app', get_template_directory_uri() .'/js/app1.js', NULL, 1.0, true);
         wp_register_script( 'rei-parallax', get_template_directory_uri() .'/js/parallax.js', NULL, 1.0, true);
         wp_register_script( 'rei-includeHTML', get_template_directory_uri() .'/js/includeHTML.js', NULL, 1.0, true);
         wp_register_script( 'googleMap',  '//maps.googleapis.com/maps/api/js?key=AIzaSyB_y9j1uxmOH2Y__fMGNwvJ7ZMnjAMz0oM', NULL, 1.0, true);
+
+        wp_enqueue_script( 'jquery' );
+        wp_enqueue_script( 'validatejs' );
         wp_enqueue_script( 'googleMap' );
         wp_enqueue_script( 'rei-scripts-bundled' );
         wp_enqueue_script( 'rei-app' );

@@ -19,8 +19,8 @@
         }
         padding: 0.5rem 0.5rem;
         font-family: inherit;
-        //background-color: rbga($color-white, .5);
-        color: inherit;
+        background-color: rbga($color-white, .5);
+        color: $nblack;
         border-radius: 0.2rem;
         border: none;
         border-bottom: 0.3rem solid transparent;
@@ -31,7 +31,7 @@
 
         &--select{
             background-color: rbga($color-white, .5);
-            color: currentColor;
+            color: $nblack;
             font-family: inherit;
         }
 
@@ -119,4 +119,28 @@
     &__radio-input:checked ~ &__radio-label &__radio-button::after {
         opacity: 1;
     }
+
+    .error {
+        color: red;
+        font-size: $default-font-size;
+    }
+}
+
+/*
+.error{
+    padding: 5px 9px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 3px; 
+}
+*/ 
+.success{
+    padding: 5px 9px;
+    border: 1px solid green;
+    color: green;
+    border-radius: 3px;   
+}
+ 
+form span{
+    color: red;
 }

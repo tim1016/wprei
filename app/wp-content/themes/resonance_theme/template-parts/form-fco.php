@@ -5,10 +5,10 @@
                     Get a free no-obligation consultation
                 </h1>
 
-            <form action="" method="post" autocomplete="on">
+            <form action="<?php the_permalink()?>" method="post" autocomplete="on" name="fastcashoffer">
                 <div class="form-row">
                     <div class="form-col-1-of-2">
-                        <input type="text" class="form__input" autocomplete='given-name' placeholder="First Name" id="fname"  name="firstname" required>
+                        <input type="text" class="form__input" autocomplete='given-name' placeholder="First Name" id="fname"   name="firstname" required>
                     </div>
                     
                     <div class="form-col-1-of-2">
