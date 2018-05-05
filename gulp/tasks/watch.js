@@ -12,5 +12,10 @@ var gulp = require('gulp'),
       
         gulp.watch(settings.themeLocation + '/*.php', function(){browserSync.reload();});
         gulp.watch(settings.themeLocation + '/css/*.css', function(){browserSync.reload();});
+        gulp.watch([settings.themeLocation + '/js/modules/*.js', settings.themeLocation + '/js/*.js'], ['waitForScripts']);
         
+    });
+
+    gulp.task('waitForScripts', ['scripts'], function() {
+        browserSync.reload();
     });
