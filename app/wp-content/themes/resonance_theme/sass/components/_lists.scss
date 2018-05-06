@@ -71,18 +71,17 @@ $item-margin-left: 5rem;
 .link-list {
     li {
         padding: 1rem 0;
-        font-size: $default-font-size;       
+        font-size: $default-font-size;
+        color: $color-secondary;         
     
-        .search-overlay & { 
-            font-size: 1.3rem;
-        }   
     }
   
     li:last-child {
       border-bottom: none;
     }
   
-    a { 
+    a:link,a:visited { 
+      text-decoration: none;
       color: $color-secondary;
     }
 }

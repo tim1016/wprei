@@ -29,6 +29,11 @@
         wp_enqueue_style(  'rei-themesytle' );
         wp_enqueue_style( 'rei-themedetail' );
 
+
+        wp_localize_script('rei-scripts-bundled', 'reiData', array(
+            'root_url' => get_site_url()
+        ));
+
     }
     add_action( 'wp_enqueue_scripts', 'rei_theme_stylesheets' );
 

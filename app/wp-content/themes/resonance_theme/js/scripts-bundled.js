@@ -13614,6 +13614,8 @@ function () {
   function Search() {
     _classCallCheck(this, Search);
 
+    this.addSearchHTML();
+    this.timeDelay = 500;
     this.openButton = (0, _jquery.default)(".js-search-trigger");
     this.closeButton = (0, _jquery.default)(".search-overlay__close");
     this.searchOverlay = (0, _jquery.default)(".search-overlay");
@@ -13648,7 +13650,7 @@ function () {
             this.isSpinnerVisible = true;
           }
 
-          this.typingTimer = setTimeout(this.getResults.bind(this), 2000);
+          this.typingTimer = setTimeout(this.getResults.bind(this), this.timeDelay);
         } else {
           this.searchField.html('');
           this.isSpinnerVisible = false;
@@ -13660,8 +13662,19 @@ function () {
   }, {
     key: "getResults",
     value: function getResults() {
-      this.isSpinnerVisible = false;
-      this.resultsDiv.html("Imagine real search results here");
+      var _this = this;
+
+      _jquery.default.when(_jquery.default.getJSON(reiData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val()), _jquery.default.getJSON(reiData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val())).then(function (posts, pages) {
+        var combinedResults = posts[0].concat(pages[0]);
+
+        _this.resultsDiv.html("\n                    <h2 class=\"search-overlay__section-title\">General Information</h2>\n                    ".concat(combinedResults.length ? '<ul class="link-list min-list">' : '<p> No General information found </p>', "\n                    ").concat(combinedResults.map(function (item) {
+          return "<li>\n                                            <a href=\"".concat(item.link, "\">").concat(item.title.rendered, "</a>\n                                        </li>");
+        }).join(''), "\n                    ").concat(combinedResults.length ? '</ul>' : '', "\n                "));
+
+        _this.isSpinnerVisible = false;
+      }, function () {
+        _this.resultsDiv.html('<h1>Unexpected error in Javascript search</h1>');
+      });
     }
   }, {
     key: "keyDispatcher",
@@ -13677,8 +13690,14 @@ function () {
   }, {
     key: "openOverlay",
     value: function openOverlay() {
+      var _this2 = this;
+
       this.searchOverlay.addClass("search-overlay--active");
       (0, _jquery.default)("body").addClass("body-no-scroll");
+      this.searchField.val('');
+      setTimeout(function () {
+        return _this2.searchField.focus();
+      }, this.timeDelay + 1);
       this.isOverlayOpen = true;
     }
   }, {
@@ -13687,6 +13706,11 @@ function () {
       this.searchOverlay.removeClass("search-overlay--active");
       (0, _jquery.default)("body").removeClass("body-no-scroll");
       this.isOverlayOpen = false;
+    }
+  }, {
+    key: "addSearchHTML",
+    value: function addSearchHTML() {
+      (0, _jquery.default)("body").append("\n        <div class=\"search-overlay\">\n            <div class=\"search-overlay__top\">\n                <div class=\"row\">\n                    <div class=\"container\">\n                        <i class=\"fa fa-search search-overlay__icon\" aria-hidden=\"true\"></i>\n                        <input type=\"text\" class=\"search-term\" placeholder=\"What are you looking for\" name=\"\" id=\"search-term\">\n                        <i class=\"fa fa-window-close search-overlay__close\" aria-hidden=\"true\"></i>\n                    </div>\n                </div>\n            </div>\n        \n            <div class=\"row\">\n                <div class=\"search-overlay__results generic-text\">        \n                </div>\n            </div>\n        </div>\n        ");
     }
   }]);
 
