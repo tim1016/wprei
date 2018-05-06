@@ -1412,8 +1412,7 @@ a.page-numbers:hover {
 
 .link-list li {
   padding: 1rem 0;
-  font-size: 1.6rem;
-  color: #cf6766; }
+  font-size: 1.6rem; }
 
 .link-list li:last-child {
   border-bottom: none; }

@@ -51,6 +51,56 @@ class Search{
     };
 
     getResults(){
+        $.getJSON(reiData.root_url + '/wp-json/rei/v1/search?term='+ this.searchField.val(), (results) => {
+            this.resultsDiv.html(`
+            <div class="row">
+                <div class="col-1-of-3">
+                    <h2 class="search-overlay__section-title">General Information</h2>
+                    ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p> No General information found </p>'}
+                    ${results.generalInfo.map(item => `<li>
+                                                        <a href="${item.permalink}">${item.title}</a>
+                                                        ${item.postType == 'post' ? `by ${item.authorName}` : ''}
+                                                        </li>`).join('')}
+                    ${results.generalInfo.length ? '</ul>' : ''}
+                </div>
+                <div class="col-1-of-3">
+                    <h2 class="search-overlay__section-title">Programs</h2>
+                    ${results.programs.length ? '<ul class="link-list min-list">' : `<p> No programs the search criterion. <a href="${reiData.root_url}/programs">View All Programs</a> </p>`}
+                    ${results.programs.map(item => `<li>
+                                                        <a href="${item.permalink}">${item.title}</a>
+                                                        </li>`).join('')}
+                    ${results.programs.length ? '</ul>' : ''}
+
+                    <h2 class="search-overlay__section-title">Professors</h2>
+                    ${results.professors.length ? '<ul class="link-list min-list">' : '<p> No professors the search criterion. View all programs </p>'}
+                    ${results.professors.map(item => `<li>
+                                                        <a href="${item.permalink}">${item.title}</a>
+                                                        </li>`).join('')}
+                    ${results.professors.length ? '</ul>' : ''}                    
+            
+                </div>
+                <div class="col-1-of-3">
+                    <h2 class="search-overlay__section-title">Campuses</h2>
+                    ${results.campuses.length ? '<ul class="link-list min-list">' : `<p> No campuses the search criterion. <a href="${reiData.root_url}/campuses">View All Campuses</a> </p>`}
+                    ${results.campuses.map(item => `<li>
+                                                        <a href="${item.permalink}">${item.title}</a>
+                                                        </li>`).join('')}
+                    ${results.campuses.length ? '</ul>' : ''}  
+                    <h2 class="search-overlay__section-title">Events</h2>   
+                    ${results.events.length ? '<ul class="link-list min-list">' : '<p> No events the search criterion. View all programs </p>'}
+                    ${results.events.map(item => `<li>
+                                                        <a href="${item.permalink}">${item.title}</a>
+                                                        </li>`).join('')}
+                    ${results.events.length ? '</ul>' : ''}  
+                </div>
+            </div>   
+            `);
+            this.isSpinnerVisible=false;
+        });
+
+
+        //Delete this code a bit later on
+        /*
         $.when(
             $.getJSON(reiData.root_url + '/wp-json/wp/v2/posts?search='+ this.searchField.val()),
             $.getJSON(reiData.root_url + '/wp-json/wp/v2/pages?search='+ this.searchField.val())
@@ -62,12 +112,14 @@ class Search{
                     ${combinedResults.length ? '<ul class="link-list min-list">' : '<p> No General information found </p>'}
                     ${combinedResults.map(item => `<li>
                                             <a href="${item.link}">${item.title.rendered}</a>
+                                            ${item.type == 'post' ? `by ${item.authorName}` : ''}
                                         </li>`).join('')}
                     ${combinedResults.length ? '</ul>' : ''}
                 `);
                 this.isSpinnerVisible = false;},
                 ()=>{this.resultsDiv.html('<h1>Unexpected error in Javascript search</h1>')}
             );
+            */
     }
 
 
