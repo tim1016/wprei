@@ -13669,38 +13669,16 @@ function () {
           return "<li>\n                                                        <a href=\"".concat(item.permalink, "\">").concat(item.title, "</a>\n                                                        ").concat(item.postType == 'post' ? "by ".concat(item.authorName) : '', "\n                                                        </li>");
         }).join(''), "\n                    ").concat(results.generalInfo.length ? '</ul>' : '', "\n                </div>\n                <div class=\"col-1-of-3\">\n                    <h2 class=\"search-overlay__section-title\">Programs</h2>\n                    ").concat(results.programs.length ? '<ul class="link-list min-list">' : "<p> No programs the search criterion. <a href=\"".concat(reiData.root_url, "/programs\">View All Programs</a> </p>"), "\n                    ").concat(results.programs.map(function (item) {
           return "<li>\n                                                        <a href=\"".concat(item.permalink, "\">").concat(item.title, "</a>\n                                                        </li>");
-        }).join(''), "\n                    ").concat(results.programs.length ? '</ul>' : '', "\n\n                    <h2 class=\"search-overlay__section-title\">Professors</h2>\n                    ").concat(results.professors.length ? '<ul class="link-list min-list">' : '<p> No professors the search criterion. View all programs </p>', "\n                    ").concat(results.professors.map(function (item) {
+        }).join(''), "\n                    ").concat(results.programs.length ? '</ul>' : '', "\n\n\n                    <h2 class=\"search-overlay__section-title\">Professors</h2>\n                    ").concat(results.professors.length ? '<ul class="person-cards">' : "<p>No professors match that search.</p>", "\n                      ").concat(results.professors.map(function (item) {
+          return "\n                        <li class=\"person-card__list-item\">\n                          <a class=\"person-card\" href=\"".concat(item.permalink, "\">\n                            <img class=\"person-card__image\" src=\"").concat(item.image, "\">\n                            <span class=\"person-card__name\">").concat(item.title, "</span>\n                          </a>\n                        </li>\n                      ");
+        }).join(''), "\n                    ").concat(results.professors.length ? '</ul>' : '', "\n            \n                </div>\n                <div class=\"col-1-of-3\">\n                    <h2 class=\"search-overlay__section-title\">Campuses</h2>\n                    ").concat(results.campuses.length ? '<ul class="link-list min-list">' : "<p> No campuses the search criterion. <a href=\"".concat(reiData.root_url, "/campuses\">View All Campuses</a> </p>"), "\n                    ").concat(results.campuses.map(function (item) {
           return "<li>\n                                                        <a href=\"".concat(item.permalink, "\">").concat(item.title, "</a>\n                                                        </li>");
-        }).join(''), "\n                    ").concat(results.professors.length ? '</ul>' : '', "                    \n            \n                </div>\n                <div class=\"col-1-of-3\">\n                    <h2 class=\"search-overlay__section-title\">Campuses</h2>\n                    ").concat(results.campuses.length ? '<ul class="link-list min-list">' : "<p> No campuses the search criterion. <a href=\"".concat(reiData.root_url, "/campuses\">View All Campuses</a> </p>"), "\n                    ").concat(results.campuses.map(function (item) {
-          return "<li>\n                                                        <a href=\"".concat(item.permalink, "\">").concat(item.title, "</a>\n                                                        </li>");
-        }).join(''), "\n                    ").concat(results.campuses.length ? '</ul>' : '', "  \n                    <h2 class=\"search-overlay__section-title\">Events</h2>   \n                    ").concat(results.events.length ? '<ul class="link-list min-list">' : '<p> No events the search criterion. View all programs </p>', "\n                    ").concat(results.events.map(function (item) {
-          return "<li>\n                                                        <a href=\"".concat(item.permalink, "\">").concat(item.title, "</a>\n                                                        </li>");
-        }).join(''), "\n                    ").concat(results.events.length ? '</ul>' : '', "  \n                </div>\n            </div>   \n            "));
+        }).join(''), "\n                    ").concat(results.campuses.length ? '</ul>' : '', "  \n\n\n\n                    <h2 class=\"search-overlay__section-title\">Events</h2>   \n                    ").concat(results.events.length ? '' : "<p> No campuses the search criterion. <a href=\"".concat(reiData.root_url, "/events\">View All Campuses</a> </p>"), "\n                    ").concat(results.events.map(function (item) {
+          return "\n                    <div class=\"event-summary\">\n                    <a class=\"event-summary__date u-center-text\" href=\"".concat(item.permalink, "\">\n                        <span class=\"event-summary__month\">").concat(item.month, "</span>\n                        <span class=\"event-summary__day\">").concat(item.day, "</span>  \n                    </a>\n                    <div class=\"event-summary__content\">\n                        <h5 class=\"event-summary__title headline headline--tiny\"><a href=\"").concat(item.permalink, "\">").concat(item.title, "</a></h5>\n                        <p> ").concat(item.description, " <a href=\"").concat(item.permalink, "\" class=\"nu gray\">Learn more</a> </p>\n                    </div>\n                    </div>                    \n                    \n                    ");
+        }).join(''), "\n                    \n                </div>\n            </div>   \n            "));
 
         _this.isSpinnerVisible = false;
-      }); //Delete this code a bit later on
-
-      /*
-      $.when(
-          $.getJSON(reiData.root_url + '/wp-json/wp/v2/posts?search='+ this.searchField.val()),
-          $.getJSON(reiData.root_url + '/wp-json/wp/v2/pages?search='+ this.searchField.val())
-          ).
-          then((posts,pages)=>{
-              var combinedResults = posts[0].concat(pages[0]);
-              this.resultsDiv.html(`
-                  <h2 class="search-overlay__section-title">General Information</h2>
-                  ${combinedResults.length ? '<ul class="link-list min-list">' : '<p> No General information found </p>'}
-                  ${combinedResults.map(item => `<li>
-                                          <a href="${item.link}">${item.title.rendered}</a>
-                                          ${item.type == 'post' ? `by ${item.authorName}` : ''}
-                                      </li>`).join('')}
-                  ${combinedResults.length ? '</ul>' : ''}
-              `);
-              this.isSpinnerVisible = false;},
-              ()=>{this.resultsDiv.html('<h1>Unexpected error in Javascript search</h1>')}
-          );
-          */
-
+      });
     }
   }, {
     key: "keyDispatcher",

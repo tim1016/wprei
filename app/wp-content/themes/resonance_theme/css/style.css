@@ -1240,6 +1240,44 @@ a.page-numbers:hover {
 .card:hover {
   transform: translateY(-0.2rem) scale(1.02); }
 
+.person-cards {
+  margin: 0;
+  padding: 0; }
+  .search-overlay .person-cards {
+    padding-top: 2.1rem; }
+
+.person-card {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  margin-right: 1.5rem;
+  background-color: #8eaebd;
+  overflow: hidden;
+  text-align: center; }
+  .search-overlay .person-card {
+    width: 18rem; }
+  .person-card__image {
+    display: block;
+    transition: opacity .3s ease-out, transform .3s ease-out; }
+  .person-card:hover .person-card__image {
+    opacity: .80;
+    transform: scale(1.1) rotate(4deg); }
+  .person-card__name {
+    font-weight: 400;
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 0;
+    color: #FFF;
+    left: 0;
+    right: 0;
+    padding: .3rem .1rem;
+    background-color: #cf6766; }
+  .person-card:hover .person-card__name {
+    background-color: #cf6766; }
+  .person-card__list-item {
+    display: inline-block;
+    list-style: none; }
+
 .search-overlay {
   overflow-y: auto;
   overflow-x: hidden;
@@ -1333,12 +1371,11 @@ a.page-numbers:hover {
   overflow: hidden; }
 
 .search-trigger {
-  display: inline-block;
+  display: block;
   color: #FFF;
   position: relative;
   cursor: pointer;
-  top: 0.6rem;
-  margin-left: 2rem; }
+  top: 1.9rem; }
   @media only screen and (max-width: 75em) {
     .search-trigger {
       display: inline-block;

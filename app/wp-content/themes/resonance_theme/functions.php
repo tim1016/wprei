@@ -33,7 +33,6 @@
         wp_register_style( 'rei-themesytle',  get_stylesheet_directory_uri() .'/css/style.css', array(), null, 'all' );
         wp_register_style( 'rei-themedetail', get_stylesheet_uri(), '', null, 'all' );
 
-        echo get_template_directory_uri() . '/css/style.css';
         wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Lato:100,300,400,700,900'); 
         wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
         wp_enqueue_style(  'rei-themesytle' );

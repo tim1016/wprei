@@ -71,12 +71,18 @@ class Search{
                                                         </li>`).join('')}
                     ${results.programs.length ? '</ul>' : ''}
 
+
                     <h2 class="search-overlay__section-title">Professors</h2>
-                    ${results.professors.length ? '<ul class="link-list min-list">' : '<p> No professors the search criterion. View all programs </p>'}
-                    ${results.professors.map(item => `<li>
-                                                        <a href="${item.permalink}">${item.title}</a>
-                                                        </li>`).join('')}
-                    ${results.professors.length ? '</ul>' : ''}                    
+                    ${results.professors.length ? '<ul class="person-cards">' : `<p>No professors match that search.</p>`}
+                      ${results.professors.map(item => `
+                        <li class="person-card__list-item">
+                          <a class="person-card" href="${item.permalink}">
+                            <img class="person-card__image" src="${item.image}">
+                            <span class="person-card__name">${item.title}</span>
+                          </a>
+                        </li>
+                      `).join('')}
+                    ${results.professors.length ? '</ul>' : ''}
             
                 </div>
                 <div class="col-1-of-3">
@@ -86,40 +92,31 @@ class Search{
                                                         <a href="${item.permalink}">${item.title}</a>
                                                         </li>`).join('')}
                     ${results.campuses.length ? '</ul>' : ''}  
+
+
+
                     <h2 class="search-overlay__section-title">Events</h2>   
-                    ${results.events.length ? '<ul class="link-list min-list">' : '<p> No events the search criterion. View all programs </p>'}
-                    ${results.events.map(item => `<li>
-                                                        <a href="${item.permalink}">${item.title}</a>
-                                                        </li>`).join('')}
-                    ${results.events.length ? '</ul>' : ''}  
+                    ${results.events.length ? '' : `<p> No campuses the search criterion. <a href="${reiData.root_url}/events">View All Campuses</a> </p>`}
+                    ${results.events.map(item => `
+                    <div class="event-summary">
+                    <a class="event-summary__date u-center-text" href="${item.permalink}">
+                        <span class="event-summary__month">${item.month}</span>
+                        <span class="event-summary__day">${item.day}</span>  
+                    </a>
+                    <div class="event-summary__content">
+                        <h5 class="event-summary__title headline headline--tiny"><a href="${item.permalink}">${item.title}</a></h5>
+                        <p> ${item.description} <a href="${item.permalink}" class="nu gray">Learn more</a> </p>
+                    </div>
+                    </div>                    
+                    
+                    `).join('')}
+                    
                 </div>
             </div>   
             `);
             this.isSpinnerVisible=false;
         });
 
-
-        //Delete this code a bit later on
-        /*
-        $.when(
-            $.getJSON(reiData.root_url + '/wp-json/wp/v2/posts?search='+ this.searchField.val()),
-            $.getJSON(reiData.root_url + '/wp-json/wp/v2/pages?search='+ this.searchField.val())
-            ).
-            then((posts,pages)=>{
-                var combinedResults = posts[0].concat(pages[0]);
-                this.resultsDiv.html(`
-                    <h2 class="search-overlay__section-title">General Information</h2>
-                    ${combinedResults.length ? '<ul class="link-list min-list">' : '<p> No General information found </p>'}
-                    ${combinedResults.map(item => `<li>
-                                            <a href="${item.link}">${item.title.rendered}</a>
-                                            ${item.type == 'post' ? `by ${item.authorName}` : ''}
-                                        </li>`).join('')}
-                    ${combinedResults.length ? '</ul>' : ''}
-                `);
-                this.isSpinnerVisible = false;},
-                ()=>{this.resultsDiv.html('<h1>Unexpected error in Javascript search</h1>')}
-            );
-            */
     }
 
 
