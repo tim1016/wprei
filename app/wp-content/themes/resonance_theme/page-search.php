@@ -36,10 +36,17 @@ while(have_posts()){
             <div class="row generic-text">
 
                 <div class="col-2-of-3">
-                    <form metod="get" action="<?php echo esc_url( site_url('/'));?>">
-                        <input type="search" name="s">
-                        <input type="submit" value="Search Me">
-                    </form>
+                    <div class="form-container boxed white dark-shadow">
+                        <form class="search-form" method="get" action="<?php echo esc_url( site_url('/'));?>">
+                            <div class="form-row">
+                                <input class="form__input" type="search" name="s">
+                            </div>
+
+                            <div class="form-row u-center-text">
+                                <input class="btn" type="submit" value="Search">
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <?php 

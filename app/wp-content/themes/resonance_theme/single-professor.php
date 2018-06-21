@@ -29,14 +29,8 @@ while(have_posts()){
             <div class="col-2-of-3">
             <?php  the_content( );?>
             </div>
-        </div>
-        
+        </div>        
         <div class="row generic-text">
-
-
-            
-
-            
             <?php
                 $relatedPrograms = get_field('related_programs');
                 if($relatedPrograms){
