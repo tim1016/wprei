@@ -125,11 +125,11 @@
 
 
 .search-trigger {
-    display: block;
+    display: inline-block; 
 	color: #FFF;
 	position: relative;
 	cursor: pointer;
-	top: 1.9rem;
+	//top: 1.9rem;
 	//margin-left: 2rem;
 	@include respond(tab-land){
 		display: inline-block;

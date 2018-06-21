@@ -27,10 +27,10 @@ while(have_posts()){
                     </div>
                 </div>
             </div>
--->
+
         </section>
 
-
+-->
         <section class="section">
 
             <div class="row generic-text">

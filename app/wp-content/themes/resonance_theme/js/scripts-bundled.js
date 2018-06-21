@@ -13703,6 +13703,7 @@ function () {
         return _this2.searchField.focus();
       }, this.timeDelay + 1);
       this.isOverlayOpen = true;
+      return false;
     }
   }, {
     key: "closeOverlay",

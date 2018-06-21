@@ -27,16 +27,19 @@ while(have_posts()){
                     </div>
                 </div>
             </div>
--->
-        </section>
 
+        </section>
+-->
 
         <section class="section">
 
             <div class="row generic-text">
 
                 <div class="col-2-of-3">
-                    Hello123
+                    <form metod="get" action="<?php echo esc_url( site_url('/'));?>">
+                        <input type="search" name="s">
+                        <input type="submit" value="Search Me">
+                    </form>
                 </div>
 
                 <?php 

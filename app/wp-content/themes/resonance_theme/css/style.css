@@ -1371,11 +1371,10 @@ a.page-numbers:hover {
   overflow: hidden; }
 
 .search-trigger {
-  display: block;
+  display: inline-block;
   color: #FFF;
   position: relative;
-  cursor: pointer;
-  top: 1.9rem; }
+  cursor: pointer; }
   @media only screen and (max-width: 75em) {
     .search-trigger {
       display: inline-block;

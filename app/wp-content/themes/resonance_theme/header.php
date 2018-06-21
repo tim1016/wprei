@@ -11,7 +11,7 @@
 </head>
 <body <?php body_class(  );?>>
     <header class="header">
-        <div class="header__navigation">
+        <div class="header__navigation">    
             <div class="fixed">
                 <div class="row">
                     <div class="brand">          
@@ -59,7 +59,7 @@
                             <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"';?>><a href="<?php echo site_url( 'Blog' )?>">Blog</a></li>
                             <li><a href="#" class=" white">Login</a></li>
                             <li><a href="#" class=" white">Sign Up</a></li>
-                            <li><span class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span></li>
+                            <li><a href="<?php echo esc_url( site_url('/search') )?>" class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                         </ul>
                     </nav>
                 </div>
