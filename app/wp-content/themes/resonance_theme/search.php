@@ -15,14 +15,9 @@ pageBanner(
         <?php 
             while(have_posts()){
                 the_post(); 
-                get_template_part('template-parts/gallery', get_post_type());  
+                get_template_part('template-parts/content', get_post_type());  
             }
-            echo paginate_links(  ); 
         ?>
-    </div>
-
-    <div class="blog-gallery">
-        
     </div>
 </section>
 
