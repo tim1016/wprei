@@ -61,6 +61,10 @@
                             <li><a href="<?php echo esc_url( site_url('/search') )?>" class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></a></li>
 
                             <?php if(is_user_logged_in()){ ?>
+                                <li><a href="<?php echo site_url('/my-notes'); ?>" class="button button--tertiary">My Notes</a></li>
+
+
+
                                 <li><a href="<?php echo wp_logout_url(); ?>" class="button button--secondary button--with-photo">
                                 <span><?php echo  get_avatar( get_current_user_id(),30); ?></span>
                                 <span>Log out</span>
