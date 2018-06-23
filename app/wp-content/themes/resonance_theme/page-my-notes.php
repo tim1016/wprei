@@ -38,6 +38,13 @@ while(have_posts()){
 -->
         <section class="section">
             <div class="row generic-text">
+                <div class="create-note">
+                    <h2 class="heading-3">Create New Note</h2>
+                    <input class="new-note-title" placeholder="Title">
+                    <textarea class="new-note-body" placeholder="Your note here" name="" id="" cols="30" rows="10"></textarea>
+                    <span class="submit-note">Create Note</span>
+                    <span class="note-limit-message">You have reached your limit. Delete a note to make room for a new one.</span>
+                </div>
                 <ul class="min-list link-list" id="my-notes">
                     <?php 
                         $userNotes = new WP_Query( array(
@@ -49,15 +56,16 @@ while(have_posts()){
                         while($userNotes->have_posts()){
                             $userNotes->the_post();
                             ?>
-                            <li>
-                                <input class="note-title-field" value="<?php echo esc_attr( get_the_title() )?>">
+                            <li data-id="<?php the_ID();?>">
+                                <input readonly class="note-title-field" value="<?php echo str_replace('Private: ', '' , esc_attr( get_the_title() ))?>"> 
                                 <span class="edit-note"><i class="fa fa-pencil" aria-hidden="true"> Edit</i></span>
                                 <span class="delete-note"><i class="fa fa-trash-o" aria-hidden="true"> Delete</i></span>
-                                <textarea class="note-body-field">
+                                <textarea readonly class="note-body-field">
                                     <?php
-                                       echo esc_attr(get_the_content());
+                                       echo esc_textarea(get_the_content());
                                     ?>
                                 </textarea>
+                                <span class="update-note button button--primary"><i class="fa fa-arrow-right" aria-hidden="true"> Save</i></span>
                             </li>
                             
                             <?php

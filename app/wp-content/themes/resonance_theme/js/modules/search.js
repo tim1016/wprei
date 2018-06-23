@@ -121,10 +121,11 @@ class Search{
 
 
     keyDispatcher(e){
+        /*
         if(e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is('focus'))
         {   
             this.openOverlay();
-        }
+        } */
         if(e.keyCode == 27 && this.isOverlayOpen)
         {
             this.closeOverlay();

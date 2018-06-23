@@ -16,6 +16,7 @@
     border: none;
     background-color: $color-secondary;
     line-height: 1.65;
+    font-size: $default-font-size;
 }
 
 .submit-note:hover {
@@ -54,7 +55,7 @@
     @include respond(tab-port) {
     width: 100%;
     }
-
+ 
 
 }
 
@@ -77,15 +78,7 @@
     animation: pulseBorder .75s alternate infinite;
 }
 
-@keyframes pulseBorder {
-    0% {
-    border: .1rem solid #FFF;
-    }
 
-    100% {
-    border: .1rem solid #CCC;
-    }
-}
 
 /* Create Note */
 .create-note {
@@ -100,7 +93,6 @@
     font-family: 'Lato', 'Roboto', sans-serif;
     border: none;
     margin-bottom: 1rem;
-    font-size: 1.15rem;
     box-sizing: border-box;
 }
 
@@ -113,6 +105,18 @@
     border: none;
     margin-bottom: 1rem;
     height: 17rem;
-    font-size: 1.15rem;
     line-height: 1.65;
+}
+
+.note-limit-message {
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s ease-out;
+	color: #c32929;
+	font-weight: bold;
+}
+
+.note-limit-message.active {
+	visibility: visible;
+	opacity: 1;
 }

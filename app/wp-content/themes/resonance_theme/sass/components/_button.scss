@@ -188,11 +188,11 @@
         background: linear-gradient($color-secondary-dark, $color-secondary-dark);
     }
 
-    &--blue {
+    &--primary {
         background-color: $color-primary;
     }
 
-    &--blue:hover {
+    &--primary:hover {
         background: linear-gradient($color-primary-dark, $color-primary);
     }
 

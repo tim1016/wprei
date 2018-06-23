@@ -121,3 +121,12 @@
 }
 
 
+@keyframes pulseBorder {
+    0% {
+    border: .1rem solid #FFF;
+    }
+
+    100% {
+    border: .1rem solid #CCC;
+    }
+}

@@ -117,6 +117,12 @@ img {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+@keyframes pulseBorder {
+  0% {
+    border: .1rem solid #FFF; }
+  100% {
+    border: .1rem solid #CCC; } }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -332,9 +338,9 @@ body {
     background-color: #B64E4D; }
   .button--dark-secondary:hover {
     background: linear-gradient(#B64E4D, #B64E4D); }
-  .button--blue {
+  .button--primary {
     background-color: #30415d; }
-  .button--blue:hover {
+  .button--primary:hover {
     background: linear-gradient(#172844, #30415d); }
   .button--tertiary {
     background-color: #8eaebd;
@@ -1555,7 +1561,8 @@ body.login {
   color: #FFF;
   border: none;
   background-color: #cf6766;
-  line-height: 1.65; }
+  line-height: 1.65;
+  font-size: 1.6rem; }
 
 .submit-note:hover {
   background-color: color(#cf6766 b(10%) s(10%)); }
@@ -1604,12 +1611,6 @@ body.login {
   border: .1rem solid #DDD;
   animation: pulseBorder .75s alternate infinite; }
 
-@keyframes pulseBorder {
-  0% {
-    border: .1rem solid #FFF; }
-  100% {
-    border: .1rem solid #CCC; } }
-
 /* Create Note */
 .create-note {
   background-color: #DDD;
@@ -1622,7 +1623,6 @@ body.login {
   font-family: 'Lato', 'Roboto', sans-serif;
   border: none;
   margin-bottom: 1rem;
-  font-size: 1.15rem;
   box-sizing: border-box; }
 
 .new-note-body {
@@ -1634,8 +1634,18 @@ body.login {
   border: none;
   margin-bottom: 1rem;
   height: 17rem;
-  font-size: 1.15rem;
   line-height: 1.65; }
+
+.note-limit-message {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-out;
+  color: #c32929;
+  font-weight: bold; }
+
+.note-limit-message.active {
+  visibility: visible;
+  opacity: 1; }
 
 .section--padding {
   padding: 5rem 0; }
