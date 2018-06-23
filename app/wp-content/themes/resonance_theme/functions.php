@@ -189,4 +189,53 @@ add_filter('manage_posts_columns', 'ST4_columns_head');
 add_action('manage_posts_custom_column', 'ST4_columns_content', 10, 2);
 
 
+// Redirect subscriber accounts out of admin and onto homepage
+add_action('admin_init', 'redirectSubsToFrontend');
+
+function redirectSubsToFrontend() {
+  $ourCurrentUser = wp_get_current_user();
+
+  if (count($ourCurrentUser->roles) == 1 AND $ourCurrentUser->roles[0] == 'subscriber') {
+    wp_redirect(site_url('/'));
+    exit;
+  }
+}
+
+add_action('wp_loaded', 'noSubsAdminBar');
+
+function noSubsAdminBar() {
+  $ourCurrentUser = wp_get_current_user();
+
+  if (count($ourCurrentUser->roles) == 1 AND $ourCurrentUser->roles[0] == 'subscriber') {
+    show_admin_bar(false);
+  }
+}
+
+//Customize Login Screen
+add_filter('login_headerurl', 'reiHeaderUrl' );
+
+function reiHeaderUrl(){
+    return esc_url(site_url( '/'));
+}
+
+add_action('login_enqueue_scripts', 'reiLoginCSS');
+
+function reiLoginCSS(){
+    wp_register_style( 'rei-themesytle',  get_stylesheet_directory_uri() .'/css/style.css', array(), null, 'all' );
+    wp_enqueue_style(  'rei-themesytle' );
+
+}
+
+add_filter('login_headertitle', 'reiLoginTitle');
+
+function reiLoginTitle(){
+    return get_bloginfo('name');
+}
+
+
+
+
+
+
 ?>
+

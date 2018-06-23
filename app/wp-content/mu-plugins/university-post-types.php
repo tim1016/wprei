@@ -4,6 +4,8 @@ add_action('init', 'university_post_types');
 function university_post_types(){
     // Event post type
     register_post_type( 'event', array(
+        'capability_type' => 'event',
+        'map_meta_cap' => true,
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'excerpt'),
         'rewrite' => array(
@@ -63,6 +65,8 @@ function university_post_types(){
 
 
     register_post_type( 'campus', array(
+        'capability_type' => 'campus',
+        'map_meta_cap' => true,
         'show_in_rest' => true,
         'supports' => array('title', 'editor', 'excerpt'),
         'rewrite' => array(

@@ -20,57 +20,7 @@ $blog-card-height : 60rem;
         font-family: Lato;
     }
 
-    .post-title{
-        //width: 100%;
-        display: block;
-        height: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
-        text-align: center;
-        &__text{
-            display: block;
-            width: 90%;
-            background-color: rgba($color: $color-primary, $alpha: 0.75);
-            padding: $padding-large-x $padding-large-x;
-            color: $color-white;
-            font-size: $default-font-size*1.5;
-            //line-height: 1.4;
-            @include absCenter;
-        }
-    }
-
-    .post-category{
-        background-color: $nblack;
-        font-size: $default-font-size;
-        
-        position: absolute;
-        top: 0;
-        right: 0;
-        p{
-            float: left;
-            display: inline;
-        }
-
-        ul{
-            list-style: none;
-
-        }
-        li{
-            float: right;
-            padding: $padding-small-y $padding-small-x;
-            border-bottom: 0.1rem solid white;
-            border-left: 0.1rem solid white;            
-        };
-        a{
-            text-decoration: none;
-            color: $color-white;
-            font-weight: 400;
-        }
-
-
-    }
-
+   
 
 
 /*
@@ -123,6 +73,60 @@ $blog-card-height : 60rem;
     }
 */
 }
+
+.post-title{
+    //width: 100%;
+    display: block;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    &__text{
+        display: block;
+        width: 90%;
+        background-color: rgba($color: $color-primary, $alpha: 0.75);
+        padding: $padding-large-x $padding-large-x;
+        color: $color-white;
+        font-size: $default-font-size*1.5;
+        //line-height: 1.4;
+        @include absCenter;
+    }
+}
+
+.post-category{
+    background-color: $nblack;
+    font-size: $default-font-size;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    p{
+        float: left;
+        display: inline;
+    }
+
+    ul{
+        list-style: none;
+
+    }
+    li{
+        float: right;
+        padding: $padding-small-y $padding-small-x;
+        border-bottom: 0.1rem solid white;
+        border-left: 0.1rem solid white;            
+    };
+    a{
+        text-decoration: none;
+        color: $color-white;
+        font-weight: 400;
+    }
+
+
+}
+
+
+
 
 .post-author{
     display: block;

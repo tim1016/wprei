@@ -57,9 +57,27 @@
                                 </ul>
                             </li>
                             <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"';?>><a href="<?php echo site_url( 'Blog' )?>">Blog</a></li>
-                            <li><a href="#" class=" white">Login</a></li>
-                            <li><a href="#" class=" white">Sign Up</a></li>
+
                             <li><a href="<?php echo esc_url( site_url('/search') )?>" class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+
+                            <?php if(is_user_logged_in()){ ?>
+                                <li><a href="<?php echo wp_logout_url(); ?>" class="button button--secondary button--with-photo">
+                                <span><?php echo  get_avatar( get_current_user_id(),30); ?></span>
+                                <span>Log out</span>
+                                </a></li>
+
+                            <?php }
+                            else{ ?>
+                                <li><a href="<?php echo wp_registration_url(); ?>" class="button button--secondary">Sign up</a></li>
+                                <li><a href="<?php echo wp_login_url();?>" class=" white">Login</a></li>
+                                <?php
+
+                            }
+                            
+                            
+                            
+                            ?>
+
                         </ul>
                     </nav>
                 </div>

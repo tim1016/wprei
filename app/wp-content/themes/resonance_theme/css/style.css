@@ -310,6 +310,53 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.button {
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  border: none;
+  outline: none; }
+  .button--small {
+    font-size: .88rem;
+    padding: .7rem 1.3rem;
+    font-weight: 300; }
+  .button--with-photo {
+    padding-left: 4rem;
+    position: relative; }
+  .button--secondary {
+    background-color: #cf6766; }
+  .button--secondary:hover {
+    background: linear-gradient(#cf6766, #E98180); }
+  .button--dark-secondary {
+    background-color: #B64E4D; }
+  .button--dark-secondary:hover {
+    background: linear-gradient(#B64E4D, #B64E4D); }
+  .button--blue {
+    background-color: #30415d; }
+  .button--blue:hover {
+    background: linear-gradient(#172844, #30415d); }
+  .button--tertiary {
+    background-color: #8eaebd;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.22); }
+  .button--tertiary:hover {
+    background: linear-gradient(#8eaebd, #cedce3); }
+  .button--gray {
+    background-color: #222; }
+  .button--white {
+    background-color: #FFF;
+    color: #173f58; }
+  .button--white:hover {
+    background-color: #DDD; }
+  .button--large {
+    font-size: 1.3rem;
+    padding: 16px 34px;
+    border-radius: 7px; }
+  .button--inactive {
+    background-color: transparent;
+    cursor: default;
+    color: #333; }
+
 .scenario-container {
   display: flex;
   flex-wrap: wrap;
@@ -1178,44 +1225,46 @@ a.page-numbers:hover {
     background-position: center;
     height: 30rem;
     font-family: Lato; }
-  .card .post-title {
+
+.post-title {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center; }
+  .post-title__text {
     display: block;
-    height: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    text-align: center; }
-    .card .post-title__text {
-      display: block;
-      width: 90%;
-      background-color: rgba(48, 65, 93, 0.75);
-      padding: 1.14286em 1.14286em;
-      color: #fff;
-      font-size: 2.4rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .card .post-category {
-    background-color: #301424;
-    font-size: 1.6rem;
+    width: 90%;
+    background-color: rgba(48, 65, 93, 0.75);
+    padding: 1.14286em 1.14286em;
+    color: #fff;
+    font-size: 2.4rem;
     position: absolute;
-    top: 0;
-    right: 0; }
-    .card .post-category p {
-      float: left;
-      display: inline; }
-    .card .post-category ul {
-      list-style: none; }
-    .card .post-category li {
-      float: right;
-      padding: 0.35714em 0.71429em;
-      border-bottom: 0.1rem solid white;
-      border-left: 0.1rem solid white; }
-    .card .post-category a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 400; }
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.post-category {
+  background-color: #301424;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .post-category p {
+    float: left;
+    display: inline; }
+  .post-category ul {
+    list-style: none; }
+  .post-category li {
+    float: right;
+    padding: 0.35714em 0.71429em;
+    border-bottom: 0.1rem solid white;
+    border-left: 0.1rem solid white; }
+  .post-category a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400; }
 
 .post-author {
   display: block;
@@ -1462,6 +1511,33 @@ a.page-numbers:hover {
   margin: 0; }
   .min-list li {
     list-style: none; }
+
+/* Customize Login Screen */
+body.login .button-primary {
+  background-color: #cedce3;
+  border-color: color(#30415d b(10%));
+  box-shadow: 0 0.1rem 0 color(#30415d b(20%)); }
+
+body.login .button-primary:hover,
+body.login .button-primary:active,
+body.login .button-primary:focus {
+  background-color: #172844;
+  border-color: #172844;
+  box-shadow: 0 0.1rem 0 #172844; }
+
+body.login {
+  background-color: #cedce3; }
+
+.login h1 a {
+  color: #172844;
+  font-size: 3.5rem;
+  font-weight: 300;
+  background-image: none;
+  width: auto;
+  height: auto;
+  text-indent: 0;
+  background: url(/img/sprite.svg#newresonance);
+  background-size: 100px 82px; }
 
 .section--padding {
   padding: 5rem 0; }
