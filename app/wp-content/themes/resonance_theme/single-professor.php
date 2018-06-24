@@ -47,26 +47,28 @@ while(have_posts()){
                     wp_reset_postdata();
                     $existsStatus='no';
                     // checking if the current user has liked the professor
-                    $existsQuery = new WP_Query( array(
-                        'author' => get_current_user_id(),
-                        'post_type' => 'like',
-                        'meta_query' => array(
-                            array(
-                                'key' => 'liked_professor_id',
-                                'compare' => '=',
-                                'value' => get_the_ID()
+                    if(is_user_logged_in()){
+                        $existsQuery = new WP_Query( array(
+                            'author' => get_current_user_id(),
+                            'post_type' => 'like',
+                            'meta_query' => array(
+                                array(
+                                    'key' => 'liked_professor_id',
+                                    'compare' => '=',
+                                    'value' => get_the_ID()
+                                )
+    
                             )
-
-                        )
-                    ));
-                    if($existsQuery->found_posts){
-                        $existsStatus='yes';
-                    } 
-                    wp_reset_postdata();
+                        ));
+                        if($existsQuery->found_posts){
+                            $existsStatus='yes';
+                        } 
+                        wp_reset_postdata();
+                    }
                 
                 ?>
 
-                <span class="like-box" data-exists="<?php echo $existsStatus;?>" data-professor="<?php the_ID();?>">
+                <span class="like-box" data-like="<?php echo $existsQuery->posts[0]->ID;?>" data-exists="<?php echo $existsStatus;?>" data-professor="<?php the_ID();?>">
                     <i class="fa fa-heart-o" aria-hidden="true"></i>
                     <i class="fa fa-heart" aria-hidden="true"></i>
                     <span class="like-count">  
