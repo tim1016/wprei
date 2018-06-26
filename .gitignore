@@ -15,6 +15,7 @@ temp/
 # OS or Editor folders
 .DS_Store
 Thumbs.db
+local.php
 .cache
 .project
 .settings
