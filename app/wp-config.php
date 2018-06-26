@@ -26,9 +26,9 @@ if(file_exists(dirname(__FILE__) . '/local.php')){
 	define('DB_PASSWORD', '123');
 	define('DB_HOST', 'localhost');
 }else{
-	define('DB_NAME', 'resonancedb');
-	define('DB_USER', 'dbuser');
-	define('DB_PASSWORD', '123');
+	define('DB_NAME', 'inkanta3_db1');
+	define('DB_USER', 'inkanta3_wp154');
+	define('DB_PASSWORD', 'Diamondsun961@');
 	define('DB_HOST', 'localhost');
 	
 }
@@ -50,14 +50,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         'R*Q$2(/!#jVWrRecq{7;Wn!xJ!.@dwp/4Yq{d87dy]0w`BSay_aRl(o5uY<7}:!J');
+define('SECURE_AUTH_KEY',  'ybqLl +Lm]EW4}adODlV9&Xer9=3SAqMl50vj[YfP~vyAs$F|#+<R28>#>`h{7E>');
+define('LOGGED_IN_KEY',    'ZKB~nf;>#}_m;=awmpkw8s((wwg`yV&wX<Zx|F+w~$ pE*[-9er[gr)EPr=h+59|');
+define('NONCE_KEY',        'Qx9DFpm4G`,Z-d|s6S~P`r+R8k?}`]MeczmNd4]EOv?i+P{2]+cz&s>@S@zNDq*L');
+define('AUTH_SALT',        'jbDOQcSO+E|j1sraJDs2$h(xuObr(_.g?*oZ=.;/OBD!k^L|B0}]ngwE/(f)Qq|T');
+define('SECURE_AUTH_SALT', '|%pHz$CoEmq^,;cW>g6Ly 3=~[fsyc:.>qm?V[$moul.Y[ U+q`w=zYG67$63=VB');
+define('LOGGED_IN_SALT',   ':o1HEt[@U8kHn* `3g-/g,P-p}]2AI^*c 4$ccsrA.Ha>Y~|g|Y <lPZ`iyg<hxe');
+define('NONCE_SALT',       't-R8x|X&,Lf+JnkdnNXPhJY0AUaWa3Ojk^SDx2:H[DHfk}ZVzGxS,NRcQH,(f#~Y');
 
 /**#@-*/
 
