@@ -21,22 +21,19 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 if(file_exists(dirname(__FILE__) . '/local.php')){
-
+	define('DB_NAME', 'resonancedb');
+	define('DB_USER', 'dbuser');
+	define('DB_PASSWORD', '123');
+	define('DB_HOST', 'localhost');
 }else{
+	define('DB_NAME', 'resonancedb');
+	define('DB_USER', 'dbuser');
+	define('DB_PASSWORD', '123');
+	define('DB_HOST', 'localhost');
 	
 }
 
 
-define('DB_NAME', 'resonancedb');
-
-/** MySQL database username */
-define('DB_USER', 'dbuser');
-
-/** MySQL database password */
-define('DB_PASSWORD', '123');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
